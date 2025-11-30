@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEB Sistema</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="conteiner">
+        <header>
+            <h1>Integração API GEB</h1>
+        </header>
+
+        <main>
+            <section id="secao-login" class="cartao">
+                <h2>Acesso</h2>
+                <form id="formulario-login">
+                    <div class="grupo-input">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="admin@geb.com.br" required>
+                    </div>
+                    <div class="grupo-input">
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" placeholder="123456" required>
+                    </div>
+                    <button type="submit" id="botao-entrar">Entrar</button>
+                </form>
+            </section>
+
+            <section id="secao-cadastro" class="cartao" style="border-top: 5px solid #28a745;">
+                <h2>Cadastrar Novo Usuário</h2>
+                <form id="formulario-cadastro">
+                    <div class="grupo-input">
+                        <label>Nome</label>
+                        <input type="text" id="cad-nome" placeholder="Seu Nome" required>
+                    </div>
+                    <div class="grupo-input">
+                        <label>Email</label>
+                        <input type="email" id="cad-email" placeholder="novo@email.com" required>
+                    </div>
+                    <div class="grupo-input">
+                        <label>Senha</label>
+                        <input type="password" id="cad-senha" placeholder="Nova Senha" required>
+                    </div>
+                    <div class="grupo-input">
+                        <label>Tipo de Permissão</label>
+                        <select id="cad-papel" style="width: 100%; padding: 10px; border-radius: 4px; border: 1px solid #ddd;">
+                            <option value="ROLE_ADMIN">Administrador (Total)</option>
+                            <option value="ROLE_OPERADOR">Operador (Restrito)</option>
+                        </select>
+                    </div>
+                    <button type="submit" style="background-color: #28a745;">Cadastrar</button>
+                </form>
+            </section>
+
+            <section id="secao-resultado" class="cartao oculto">
+                <h2>Resposta do Servidor</h2>
+                <div id="painel-dados">Aguardando requisição...</div>
+                <button id="botao-limpar">Limpar / Sair</button>
+                <button id="botao-teste-api">Testar Conexão (/publico)</button>
+                <button id="botao-vip" style="background-color: #28a745; margin-top: 10px;">
+                    Acessar Área VIP (Requer Token)
+                </button>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

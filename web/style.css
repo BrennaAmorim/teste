@@ -1,0 +1,84 @@
+:root {
+    --cor-fundo: #f4f4f9;
+    --cor-texto: #333;
+    --cor-primaria: #0056b3;
+    --cor-secundaria: #ffffff;
+    --borda-raio: 8px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.conteiner {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cartao {
+    background-color: var(--cor-secundaria);
+    padding: 20px;
+    border-radius: var(--borda-raio);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 15px;
+}
+
+.grupo-input {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura */
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--cor-primaria);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #004494;
+}
+
+#painel-dados {
+    background: #e9ecef;
+    padding: 10px;
+    border-radius: 4px;
+    font-family: monospace;
+    margin-bottom: 10px;
+    word-break: break-all;
+}
+
+.oculto {
+    display: none;
+}
